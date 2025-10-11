@@ -23,6 +23,22 @@ A production-ready microservice-based system for issuing and verifying digital c
 
 ---
 
+## 📸 Application Preview
+
+### Dashboard Overview
+![Dashboard Light Mode](https://res.cloudinary.com/djqkofsv0/image/upload/v1760181750/Screenshot_2025-10-11_163714_auobzz.png)
+
+*Modern dashboard with system statistics, service health indicators, and quick access to credential management features.*
+
+---
+
+### Issue Credential Interface
+![Issue Credentials Form](https://res.cloudinary.com/djqkofsv0/image/upload/v1760181750/Screenshot_2025-10-11_163911_xy9c7m.png)
+
+*Clean, intuitive form for issuing new credentials with real-time validation and preview functionality.*
+
+---
+
 ## 📋 Table of Contents
 
 - [Overview](#overview)
@@ -581,6 +597,8 @@ Content-Type: application/json
 - Complete theme support
 - Persistent theme preference
 
+For detailed screenshots and visual documentation, see [docs/SCREENSHOTS.md](docs/SCREENSHOTS.md)
+
 ---
 
 ## 💡 Design Decisions
@@ -653,7 +671,7 @@ Content-Type: application/json
 ## 👤 Author
 
 **Name:** [Sahil Kishor]  
-**Email:** [sahilkishor82gmail.com]  
+**Email:** [sahilkishor8@gmail.com]  
 **Phone:** +91-[7562007896]  
 **GitHub:** [https://github.com/SahilKishor21]  
 **LinkedIn:** [https://www.linkedin.com/in/45-sahil/]
@@ -668,8 +686,3 @@ Content-Type: application/json
 - The open-source community for the amazing tools and libraries
 
 ---
-
-
-**Last Updated:** January 2025  
-**Version:** 1.0.0  
-**Status:** Deployed and Production Ready
