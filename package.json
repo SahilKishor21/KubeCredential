@@ -1,0 +1,12 @@
+﻿{
+  "name": "kube-credential",
+  "version": "1.0.0",
+  "description": "Microservice-based credential management system",
+  "scripts": {
+    "dev:issuance": "cd backend/issuance-service && npm run dev",
+    "dev:verification": "cd backend/verification-service && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev"
+  },
+  "keywords": ["microservices", "credentials"],
+  "license": "MIT"
+}

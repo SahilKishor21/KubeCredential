@@ -1,0 +1,50 @@
+﻿### Health Check - Issuance Service
+GET http://localhost:3001/api/health
+
+### Health Check - Verification Service
+GET http://localhost:3002/api/health
+
+### Issue a new credential
+POST http://localhost:3001/api/issue
+Content-Type: application/json
+
+{
+  "id": "CRED-1704892800000-TEST123",
+  "holderName": "Alice Johnson",
+  "holderEmail": "alice.johnson@example.com",
+  "credentialType": "Academic Certificate",
+  "issueDate": "2025-01-10T10:00:00.000Z",
+  "expiryDate": "2026-01-10T10:00:00.000Z",
+  "metadata": {
+    "university": "MIT",
+    "degree": "Bachelor of Science"
+  }
+}
+
+### Get credential by ID
+GET http://localhost:3001/api/credentials/CRED-1704892800000-TEST123
+
+### Get all credentials
+GET http://localhost:3001/api/credentials
+
+### Verify valid credential
+POST http://localhost:3002/api/verify
+Content-Type: application/json
+
+{
+  "id": "CRED-1704892800000-TEST123"
+}
+
+### Verify invalid credential
+POST http://localhost:3002/api/verify
+Content-Type: application/json
+
+{
+  "id": "INVALID-CREDENTIAL-ID"
+}
+
+### Get verification logs
+GET http://localhost:3002/api/logs
+
+### Get logs for specific credential
+GET http://localhost:3002/api/logs?credentialId=CRED-1704892800000-TEST123

@@ -1,0 +1,50 @@
+﻿version: '3.8'
+
+services:
+  issuance-service:
+    build:
+      context: ./backend/issuance-service
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+      - NODE_ENV=development
+      - WORKER_ID=worker-issuance-1
+      - DB_PATH=/data/issuance.db
+    volumes:
+      - issuance-data:/data
+    restart: unless-stopped
+
+  verification-service:
+    build:
+      context: ./backend/verification-service
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3002"
+    environment:
+      - PORT=3002
+      - NODE_ENV=development
+      - WORKER_ID=worker-verification-1
+      - DB_PATH=/data/verification.db
+      - ISSUANCE_SERVICE_URL=http://issuance-service:3001
+    volumes:
+      - verification-data:/data
+    depends_on:
+      - issuance-service
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - issuance-service
+      - verification-service
+    restart: unless-stopped
+
+volumes:
+  issuance-data:
+  verification-data:
