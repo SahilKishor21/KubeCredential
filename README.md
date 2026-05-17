@@ -676,13 +676,4 @@ For detailed screenshots and visual documentation, see [docs/SCREENSHOTS.md](doc
 **GitHub:** [https://github.com/SahilKishor21]  
 **LinkedIn:** [https://www.linkedin.com/in/45-sahil/]
 
----
 
-
-## 🙏 Acknowledgments
-
-- Zupple Labs for the assignment opportunity
-- shadcn for the beautiful UI components
-- The open-source community for the amazing tools and libraries
-
----
